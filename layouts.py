@@ -19,11 +19,8 @@ from random import randint
 ran_comp = ['logn', 'n', 'nlogn', 'n^2', 'n^3']
 team_data, pie_data, ae,ae_count,be, be_count, count = attempt_grph()
 # team_data = [[randint(1, 20) for i in range(15)], [ran_comp[randint(0, 4)] for i in range(15)]]
-team_data2 = [[randint(1, 20) for i in range(15)], [ran_comp[randint(0, 4)] for i in range(15)]]
 team_data_que_time = team_data[0]; #for line chart
-team_data_que_time2 = team_data2[0]
 comp_values = [team_data[1].count(complexity) for complexity in ran_comp] #for pie chart
-comp_values2 = [team_data2[1].count(complexity) for complexity in ran_comp]
 # random team_data generation block end
 
 #https://community.plotly.com/t/two-graphs-side-by-side/5312
