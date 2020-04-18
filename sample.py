@@ -7,7 +7,25 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app=dash.Dash('NowOrNever',external_stylesheets=external_stylesheets)
 colors={'background':'#111111',
-'text':'#7FDBFF'}
+'text':'blue'}
+tabs_styles = {
+    'height': '51px'
+}
+tab_style = {
+    'borderBottom': '1px solid #d6d6d6',
+    'padding': '2px',
+    'fontWeight': 'bold',
+    'vertical-align': 'middle',
+}
+
+tab_selected_style = {
+    'borderTop': '1px solid #d6d6d6',
+    'borderBottom': '1px solid #d6d6d6',
+    'backgroundColor': 'white',
+    'color': 'blue',
+    'padding': '10px',
+    "font-size": 20
+}
 
 server = app.server
 app.config.suppress_callback_exceptions = True
@@ -19,7 +37,8 @@ app.title = 'NowOrNeverProgressTracker'
 app.layout=html.Div(children=[
     html.H1(children='NowOrNever Dashboard',style={
         'textAlign': 'center',
-        'color': colors['text']
+        'color': colors['text'],
+        'background':"lightgreen"
     }),
     html.Div(children='A web Application for tracking progress of the students',style={
         'textAlign': 'center',
